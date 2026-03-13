@@ -17,8 +17,22 @@
             <input class="intervalo__slider intervalo__slider--min" type="range" name="valor-minimo" min="1" max="100" value="1"/>
 
              <label class="intervalo__label" for="valor-maximo">Valor maximo:<span class="intervalo__valor intervalo__valor--max"></span></label>
+             <input class="intervalo__slider intervalo__slider--max" type="range" name="valor-maximo" min="1" max="100" value="100" />
+        </section>
+
+        <section class="sorteador__area area">
+            <button class="area__button">Sorteador</button>
+            <span class="area__numero">0</span>
+        </section>
+
+        <section class="sorteador_historico historico">
+            <h2 class="historico__title">Historico</h2>
+            <ul class="historico__lista"></ul>
         </section>
     </main>
-    
+
+    <footer class="sorteador__footer">
+        <button class="sorteador__limpar">Limpar historico</button>
+    </footer>
 </body>
 </html>
