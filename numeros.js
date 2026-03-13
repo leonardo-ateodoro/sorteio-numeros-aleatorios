@@ -1,7 +1,12 @@
 
 // Variáveis de controle
-
+const valorMinimo = 1;
+const valorMaximo = 100;
+const quantidadeNumerosRecentes = 5;
 // Obter os elementos
+const sliderMin = document.querySelector ('.intervalo__slider--min');
+const sliderMax = document.querySelector ('.intervalo__slider--max');
+const botaoSortear = document.querySelector ('.area__button');
 
 // Atualizar a interface com o valor do slider
 
