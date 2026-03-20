@@ -17,7 +17,7 @@ const atualizarValorSlider = () => {
     const max = parseInt (sliderMax.value);
 
     //Exibir o valor do slider na interface
-    document.querySelector ('intervalo__valor--min').textContent = min; 
+    document.querySelector ('.intervalo__valor--min').textContent = min; 
     document.querySelector('.intervalo__valor--max').textContent = max;
 };
 

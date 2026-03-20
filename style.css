@@ -1,167 +1,159 @@
+/* 1. Variáveis com Cores Vibrantes */
 :root {
-  --color-primary: #a11a02;
-  --color-secondary: #7c0101;
+  --color-primary: #FF5E57; /* Vermelho vibrante */
+  --color-secondary: #4834DF; /* Azul profundo divertido */
   --color-text: #ffffff;
-  --color-area-sorteio: #bababa;
-  --color-text-dark: #192A56;
-  --color-button: #000000;
-  --color-button-bg: #ffffff;
-  --color-button-hover: greenyellow;
-  --color-numero-sorteado-bg: darkgreen;
-  --color-historico-hover: #F79F1F;
+  --color-area-sorteio: #FECA1E; /* Amarelo ouro */
+  --color-text-dark: #2F3542;
+  --color-button: #ffffff;
+  --color-button-bg: #686DE0;
+  --color-button-hover: #22A6B3;
+  --color-numero-sorteado-bg: #6D214F; /* Roxo intenso */
+  --color-historico-hover: #F0932B; /* Laranja */
 }
 
-.sorteador {
-  background-color: var(--color-primary);
-  color: var(--color-text);
-  font-family: Verdana, sans-serif;
-}
-
-.sorteador__header {
-  text-align: center;
-  padding: 16px;
-}
-
-.sorteador__main {
+/* 2. Estilo Global com Fundo Suave */
+body.sorteador {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Comic Sans MS', 'Verdana', sans-serif; /* Fonte mais informal e divertida */
+  
+  background-color: #ffffff;
+  background-image: url('./fundo-numeros-suave.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  
+  color: var(--color-text-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4px;
 }
 
+/* 3. Header com Efeito */
+.sorteador__header {
+  padding: 40px 20px;
+}
+
+.sorteador__header h1 {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  text-shadow: 3px 3px 0px var(--color-area-sorteio);
+  transform: rotate(-2deg); /* Inclinação divertida */
+}
+
+/* 4. Seções Estilo "Card" Divertido */
 .sorteador__intervalo,
 .sorteador__area,
 .sorteador__historico {
-  width: 80%;
-  padding: 16px;
-  margin: 8px;
-  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 30px; /* Bordas bem arredondadas */
+  border: 4px solid var(--color-text-dark); /* Borda grossa estilo cartoon */
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.1); /* Sombra sólida */
 }
 
-.sorteador__intervalo,
-.sorteador__historico {
+/* 5. Seção de Intervalo */
+.sorteador__intervalo {
   background-color: var(--color-secondary);
-}
-
-.intervalo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.intervalo__label {
-  margin-right: 8px;
+  color: var(--color-text);
 }
 
 .intervalo__valor {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 8px;
+  font-size: 1.5rem;
+  background: var(--color-area-sorteio);
+  color: var(--color-text-dark);
+  padding: 5px 15px;
+  border-radius: 15px;
+  transform: scale(1.1);
 }
 
-.area {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* 6. Área do Sorteio (Onde a mágica acontece) */
+.sorteador__area {
   background-color: var(--color-area-sorteio);
-  color: var(--color-text-dark);
-  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .area__button {
-  padding: 12px 20px;
-  font-size: 24px;
-  font-weight: bold;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
   color: var(--color-button);
-  border-radius: 8px;
-  cursor: pointer;
   background-color: var(--color-button-bg);
+  border: 3px solid var(--color-text-dark);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+.area__button:active {
+  transform: scale(0.95); /* Efeito de apertar botão */
 }
 
 .area__button:hover {
   background-color: var(--color-button-hover);
-  color: var(--color-button);
 }
 
 .area__numero {
-  font-size: 32px;
-  font-weight: bold;
-  color: var(--color-text);
-  padding: 10px;
+  font-size: 5rem;
   background-color: var(--color-numero-sorteado-bg);
-  width: 150px;
-  text-align: center;
-  border: solid 2px var(--color-text);
-  border-radius: 5px;
+  color: #fff;
+  padding: 20px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Círculo perfeito */
+  border: 6px solid var(--color-text);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
-  
-  /* Layout */
-  header{
-    text-align: center;
-    padding: 16px;
-  }
-  
-  main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4px;
-  }
-  
-  .seletor-intervalo, .area-sorteio, .historico{
-    width: 80%;
-    padding: 16px;
-    margin: 8px;
-    border-radius: 8px;
-  }
-  
-  .seletor-intervalo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .seletor-intervalo label{
-    margin-right: 8px;
-  }
-  
-  .historico{
-    text-align: center;
-  }
-  
-  .historico h2{
-    margin-top: 0;
-  }
-  
-  .historico ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .historico ul li{
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .historico ul li:hover{
-    background-color: var(--color-historico-hover);
-    color: var(--color-text-dark);
-    font-weight: 400;
-  }
-  
-  /* Footer */
-  footer{
-    text-align: center;
-    padding: 12px;
-  }
-  
-  footer button{
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
+
+/* 7. Histórico Divertido */
+.sorteador__historico {
+  background-color: #fff;
+}
+
+.historico__lista li {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  border: 2px solid var(--color-text-dark);
+  transition: 0.3s;
+}
+
+.historico__lista li:nth-child(even) {
+  transform: rotate(3deg); /* Números levemente tortos para parecerem "jogados" */
+}
+
+.historico__lista li:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+
+.historico__lista li:hover {
+  transform: rotate(0deg) scale(1.2) !important;
+  background-color: var(--color-historico-hover);
+}
+
+/* 8. Footer */
+.sorteador__limpar {
+  background: none;
+  border: 2px dashed var(--color-text-dark);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sorteador__limpar:hover {
+  background: var(--color-primary);
+  color: white;
+  border-style: solid;
+}
