@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador de Numeros Aleatórios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./numeros.js"></script>
 </head>
@@ -13,11 +14,15 @@
     </header>
     <main class="sorteador__main">
         <section class="sorteador__intervalo intervalo">
-            <label class="intervalo__label" for="valor-minimo">Valor minimo:<span class="intervalo__valor intervalo__valor--min"></span></label>
+            <label class="intervalo__label" for="valor-minimo">
+                Mínimo Percorrido: <span class="intervalo__valor intervalo__valor--min"></span>
+            </label>
             <input class="intervalo__slider intervalo__slider--min" type="range" name="valor-minimo" min="1" max="100" value="1" />
-
-             <label class="intervalo__label" for="valor-maximo">Valor maximo:<span class="intervalo__valor intervalo__valor--max"></span></label>
-             <input class="intervalo__slider intervalo__slider--max" type="range" name="valor-maximo" min="1" max="100" value="100" />
+        
+            <label class="intervalo__label" for="valor-maximo">
+                Máximo de Abdução: <span class="intervalo__valor intervalo__valor--max"></span>
+            </label>
+            <input class="intervalo__slider intervalo__slider--max" type="range" name="valor-maximo" min="1" max="100" value="100" />
         </section>
 
         <section class="sorteador__area area">
